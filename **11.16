@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class RepeatAdditionQuiz {
 
 	public static void main(String[] args) {
-		int number1 = (int)(Math.random() * 10);
+		int number1 = (int)(Math.random() * 10);  //利用random随机生成0~9的小数，乘以10变成0~99的整数
 		int number2 = (int)(Math.random() * 10);
 		ArrayList<Integer> list = new ArrayList<>();
 		
