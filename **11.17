@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class CompleteSquare {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter an integer m : ");
+		
+		int m = input.nextInt();
+		int flag = m;
+		int i = 2,j;
+		int n = 1;
+		ArrayList<Integer> list = new ArrayList<>();
+		
+		int []array = new int[1000];
+		
+		while(m != 1){
+			if(m % i == 0){
+				list.add(i);
+				m = m / i;
+				array[i]++;
+			}else{
+				i++;
+			}
+		}
+		for(j = 0;j < 1000;j++){
+			if(array[j] != 0 && array[j] % 2 == 1)
+				n = n * j;
+		}
+		
+		System.out.println("The smallest n for m * n to be a perfect square is " + n + " m * n is " + n * flag);
+		
+	}
+
+}
